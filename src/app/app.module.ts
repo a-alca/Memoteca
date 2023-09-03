@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component'; // esse componente foi automaticamente importado quando eu o criei com comando ng g c home. Após o console informar a criacao de cada componente  home (.module.ts; .css; .html; .spec.ts; component.ts e module.ts). O console informa a importacao dele assim: UPDATE src/app/app.module.ts (1056 bytes)
+import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component'; // esse componente foi automaticamente importado quando eu o criei com comando ng g c componentes/cabecalho. Após o console informar a criacao de cada componente  cabecalho (.module.ts; .css; .html; .spec.ts; component.ts e module.ts). O console informa a importacao dele assim: PDATE src/app/app.module.ts (1458 bytes) - ISSO FOI FEITO PARA CRIRAR O PRIMEIRO COMPONENTE PARA ATENDER A CONSTRUCAO DO MEMOTECA, COMECANDO PELO CABECALHO, DEFININDO ESTILIZACAO E HTML.
 
 @NgModule({
-  declarations: [ //1 - declretions onde voce vai incluir todos os componentes além de outros arquivos como diretivas e pipes que estao contidas no seu modulo.
-    AppComponent, HomeComponent
-  ],
+  declarations: [
+    AppComponent, CabecalhoComponent
+  ],  //1 - declretions onde voce vai incluir todos os componentes além de outros arquivos como diretivas e pipes que estao contidas no seu modulo.
   imports: [ // 2 - Nos Imports vc vai incluir os módulos importados tantos os da sua aplicacao como os de alguma outra biblioteca que vc estja usando, como, Angular Matirial, por exemplo.
     BrowserModule,
     AppRoutingModule
