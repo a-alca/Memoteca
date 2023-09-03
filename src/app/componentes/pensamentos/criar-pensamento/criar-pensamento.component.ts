@@ -11,7 +11,7 @@ pensamento = { // atributo pensamento, esse atributo é um objeto que possui as 
   id: '1',
   conteudo: 'Aprendendo Angular',
   autoria: 'Dev',
-  modelo: ''
+  modelo: 'modelo1'
 }
 
 constructor() {  }
@@ -22,6 +22,10 @@ ngOnInit(): void {
 
 criarPensamento() {
   alert("Novo pensamento criado")
+}
+
+cancelar() {
+  alert("acao cancelada")
 }
 
 }
