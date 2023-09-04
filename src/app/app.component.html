@@ -1,1 +1,9 @@
 <app-cabecalho></app-cabecalho> <!-- apos a criacao desse componente cabecalho e a inclusao da tag <app-cabecalho></app-cabecalho>, esse foi o primeiro modulo a renderizar no navegodor com a mensagem cabecalho works! e agora ja mostra o cabecalho construido em local -->
+  <main>
+   <!-- <app-criar-pensamento></app-criar-pensamento>
+    <app-listar-pensamento></app-listar-pensamento>
+  Essa estrutura fez com que na mesma tela fosse apresentado fomrulario de pensamento e logo abaixo o mural, e o projeto solicita que fiquem em telas separadas, por isso comentei e vou utilizar o router.
+  -->
+    <router-outlet></router-outlet> <!-- O router-outlet é uma diretiva do angular que vai atuar como um espaco reservado que o Angular vai preencher dinameicamente. Depois disso ver anotcao em app-routing.module.ts -->
+  </main>
+<app-rodape></app-rodape>

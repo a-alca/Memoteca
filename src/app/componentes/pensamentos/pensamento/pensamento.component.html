@@ -1,0 +1,13 @@
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()"> <!-- ngClass: para renderizacao de layout distinto entre pensamento-p (pequeno e -g para grande) vou retirar a class pensamento-p e incluir a diretiva ngClass e para isso, apos criar o metodo larguraPensamento() em pensamento.component.ts vou incluir aqui o [ngClass]="larguraPensamento()" -->
+  <img src="/assets/Imagens_do_curso/{{ pensamento.modelo }}.png" alt="aspas coloridas">
+  <p class="conteudo">{{ pensamento.conteudo }}</p>
+  <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
+  <div class="acoes">
+    <button class="botao-editar">
+      <img src="/assets/Imagens_do_curso/icone-editar.png" alt="iconde de editar">
+    </button>
+    <button class="botao-excluir">
+      <img src="/assets/Imagens_do_curso/icone-excluir.png" alt="iconce de excluir">
+    </button>
+  </div>
+</div>
