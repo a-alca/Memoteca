@@ -19,4 +19,10 @@ export class PensamentoComponent implements OnInit {
 
   }
 
+  larguraPensamento(): string {
+    if(this.pensamento.conteudo.length >= 256) {
+      return 'pensamento-g'
+    }
+    return 'pensamento-p'
+  }
 }

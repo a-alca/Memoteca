@@ -1,11 +1,16 @@
 <section class="container">
   <header class="header d-flex">
     <h2 class="ff-inter">Meu mural</h2>
-    <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> <!-- O routerLink é mais uma diretiva do Angular que auxilia na navegacao de paginas por rota, onde nessa atividade, a estrutura <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> ao clicar no botao Adicionar pensamento, é direcionado para o path "/criarPensamento" que direciona para o componente criarPensamento atualizando o formulario de cadastrar novo pensamento-->
+    <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
   </header>
-  <div class="mural">
-    <div *ngFor="let pensamento of listaPensamentos"> <!-- traduzindo: (*ngfor) para cada pensamento que eu quero iterar da listaPensamentos será um pensamento :) -->
-      <app-pensamento [pensamento]="pensamento"></app-pensamento> <!-- o listaPensamento aqui é o component pai e o app-pensamento é o component filho, entao como farei a cominicacao entre esses componentes esta na solucao da diretiva @Input() em pensamento.component.ts // Após inluir a diretiva @Input, inseri esse property binding aqui na tag <app-pensamento [pensamento]="pensamento"> estao pensamento recebera do component pai e listara o card pensamento -->
+  <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos"> <!-- para solucao de tratativa de mensagem de erro para o usuario, quando nao houverem pensamentos no atributo listaPensamentos, foi icluso um *ngIf onde se listaPensamentos for maior que 0, vai renderizar a div abaixo do *ngFor, porém se nao for, estao implementamos a diretiva ng-tamplate para renderizar mensagem que nao ha pensamentos disponiveis no mural-->
+    <div *ngFor="let pensamento of listaPensamentos">
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
     </div>
   </div>
 </section>
+<ng-template #semPensamentos> <!-- diretiva para aprensetar mensagem caso condicao caia no *ngIf -->
+  <div class="ff-inter sem-pensamentos">
+    <p>No momento não há pensamentos disponiveis no mural.</p>
+  </div>
+</ng-template>

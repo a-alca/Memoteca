@@ -18,6 +18,17 @@ export class ListarPensamentoComponent implements OnInit {
       conteudo: 'Minha propriedade é decorada com @Input().',
       autoria: 'Componente filho',
       modelo: 'modelo2'
+    },
+    {
+      conteudo: `Pensamento gerado na aula ngClass para renderizar esses cards conforme metodo larguraPesamento() no arquivo pensamento.component.ts
+      larguraPensamento(): string {
+        if(this.pensamento.conteudo.length >= 256) {
+          return 'pensamento-g'
+        }
+        return 'pensamento-p'
+      }`,
+      autoria: 'Componente pai',
+      modelo: 'modelo3'
     }
   ];
 
