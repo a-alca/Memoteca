@@ -1,0 +1,13 @@
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono pensamento-p"> <!-- Aqui usando a Interpolacao como forma de solucao a renderizar o modelo do card, renderizando um de seus tres estilos definido no component.css. Estruturado fica {{ pensamento.modelo }} onde pensamento é o atributo do pensamento.component.ts e modelo é a classe de estilo no pesamento.component.ts -->
+  <img src="/assets/Imagens_do_curso/{{ pensamento.modelo }}.png" alt="aspas coloridas">
+  <p class="conteudo">{{ pensamento.conteudo }}</p>
+  <p class="autoria"><b>{{ pensamento.autoria }}</b></p> <!-- esse é umteste onde vejo um vard no mural de penamento conforme atributo pensamento, para aparecer uma recoorencia, uma lista, usar a diretiva ngFor, e para isso coloquei a tag <app-pensmanto> no listar-pensmanto.component.html linha 7 onde explico essa diretiva-->
+  <div class="acoes">
+    <button class="botao-editar">
+      <img src="/assets/Imagens_do_curso/icone-editar.png" alt="iconde de editar">
+    </button>
+    <button class="botao-excluir">
+      <img src="/assets/Imagens_do_curso/icone-excluir.png" alt="iconce de excluir">
+    </button>
+  </div>
+</div>
