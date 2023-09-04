@@ -4,8 +4,8 @@
     <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> <!-- O routerLink é mais uma diretiva do Angular que auxilia na navegacao de paginas por rota, onde nessa atividade, a estrutura <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> ao clicar no botao Adicionar pensamento, é direcionado para o path "/criarPensamento" que direciona para o componente criarPensamento atualizando o formulario de cadastrar novo pensamento-->
   </header>
   <div class="mural">
-    <div *ngFor="let penamento of listaPensamentos"> <!-- traduzindo: (*ngfor) para cada pensamento que eu quero iterar da listaPensamentos será um pensamento :) -->
-      <app-pensamento></app-pensamento>
+    <div *ngFor="let pensamento of listaPensamentos"> <!-- traduzindo: (*ngfor) para cada pensamento que eu quero iterar da listaPensamentos será um pensamento :) -->
+      <app-pensamento [pensamento]="pensamento"></app-pensamento> <!-- o listaPensamento aqui é o component pai e o app-pensamento é o component filho, entao como farei a cominicacao entre esses componentes esta na solucao da diretiva @Input() em pensamento.component.ts // Após inluir a diretiva @Input, inseri esse property binding aqui na tag <app-pensamento [pensamento]="pensamento"> estao pensamento recebera do component pai e listara o card pensamento -->
     </div>
   </div>
 </section>
