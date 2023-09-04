@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-pensamento',
@@ -7,7 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PensamentoComponent implements OnInit {
 
-  @Input() pensamento = { // atributo chamado pensamento, ele é um objeto //A diretiva @Input está dizendo que esse atribuo agora irá receber informacoes do componente pai.
+  @Input() pensamento: Pensamento = { // atributo chamado pensamento, ele é um objeto //A diretiva @Input está dizendo que esse atribuo agora irá receber informacoes do componente pai.
+    id: 0,
     conteudo: 'Winter is coming',
     autoria: 'Ned',
     modelo: 'modelo2'
