@@ -3,4 +3,9 @@
     <h2 class="ff-inter">Meu mural</h2>
     <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> <!-- O routerLink é mais uma diretiva do Angular que auxilia na navegacao de paginas por rota, onde nessa atividade, a estrutura <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button> ao clicar no botao Adicionar pensamento, é direcionado para o path "/criarPensamento" que direciona para o componente criarPensamento atualizando o formulario de cadastrar novo pensamento-->
   </header>
+  <div class="mural">
+    <div *ngFor="let penamento of listaPensamentos"> <!-- traduzindo: (*ngfor) para cada pensamento que eu quero iterar da listaPensamentos será um pensamento :) -->
+      <app-pensamento></app-pensamento>
+    </div>
+  </div>
 </section>
