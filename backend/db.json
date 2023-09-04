@@ -1,0 +1,22 @@
+{
+  "pensamentos": [
+    {
+      "id": 1,
+      "conteudo": "frontend pensamento de teste",
+      "autoria": "Me",
+      "modelo": "modelo3"
+    },
+    {
+      "id": 2,
+      "conteudo": "frontend pensamento de teste2",
+      "autoria": "Me",
+      "modelo": "modelo2"
+    },
+    {
+      "id": 3,
+      "conteudo": "frontend pensamento de teste3",
+      "autoria": "Me",
+      "modelo": "modelo1"
+    }
+  ]
+}
