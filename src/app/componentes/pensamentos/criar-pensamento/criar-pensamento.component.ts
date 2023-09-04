@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -7,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CriarPensamentoComponent implements OnInit {
 
-pensamento = { // atributo pensamento, esse atributo é um objeto que possui as propriedades: id, conteudo, autoria e modelo. // como associar esse atributo ao input de pensamento, autoria e modelo lá nas tags input do HTML >> ver linha 13 [value] do criar-pensamento.component.html.
-  id: '1',
+pensamento: Pensamento = { // atributo pensamento, esse atributo é um objeto que possui as propriedades: id, conteudo, autoria e modelo. // como associar esse atributo ao input de pensamento, autoria e modelo lá nas tags input do HTML >> ver linha 13 [value] do criar-pensamento.component.html.
+  id: 1,
   conteudo: 'Aprendendo Angular',
   autoria: 'Dev',
   modelo: 'modelo1'
