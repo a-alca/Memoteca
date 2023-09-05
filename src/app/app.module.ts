@@ -8,6 +8,7 @@ import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensam
 import { FormsModule } from '@angular/forms';
 import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
 import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensam
   imports: [ // 2 - Nos Imports vc vai incluir os módulos importados tantos os da sua aplicacao como os de alguma outra biblioteca que vc estja usando, como, Angular Matirial, por exemplo.
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [], // 3 - Nos Providers nos geralmente declaramos as classes de servicos
   bootstrap: [AppComponent] // 5 - primeiro componente a ser renderizado.
