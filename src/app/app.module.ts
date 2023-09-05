@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
 import { PensamentoComponent } from './componentes/pensamentos/pensamento/pensamento.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
 
 @NgModule({
   declarations: [
-    AppComponent, CabecalhoComponent, RodapeComponent, CriarPensamentoComponent, ListarPensamentoComponent, PensamentoComponent
+    AppComponent, CabecalhoComponent, RodapeComponent, CriarPensamentoComponent, ListarPensamentoComponent, PensamentoComponent, ExcluirPensamentoComponent
   ],  //1 - declretions onde voce vai incluir todos os componentes além de outros arquivos como diretivas e pipes que estao contidas no seu modulo.
   imports: [ // 2 - Nos Imports vc vai incluir os módulos importados tantos os da sua aplicacao como os de alguma outra biblioteca que vc estja usando, como, Angular Matirial, por exemplo.
     BrowserModule,

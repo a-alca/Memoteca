@@ -1,0 +1,11 @@
+<section class="container excluir-pensamentos ff-inter ">
+  <!-- Para excludao de pensamento, apos criar esse componentr, montei o html abaixo com modal de exclusao com duas acoes em botoes excluir ou cancelar exclusao com event binding (click) , apos fui oara o pensamento.service.ts criar as acoes de excluir e cancelar-->
+  <div class="modal">
+    <p>Esse pensamento será deletado</p><br><p>Confirma a exclusão?</p>
+    <div class="acoes">
+      <button class="botao botao-excluir" (click)="excluirPensamento()" >Excluir</button>
+      <button class="botao botao-cancelar-exclusao" (click)="cancelarExclusaoPensamento()" >Cancelar exclusão</button>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</section>
