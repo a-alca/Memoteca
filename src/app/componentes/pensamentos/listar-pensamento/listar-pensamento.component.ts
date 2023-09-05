@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PensamentoComponent } from '../pensamento/pensamento.component';
 import { Pensamento } from '../pensamento';
+import { PensamentoService } from '../../pensmantos/pensamento.service';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -33,9 +34,10 @@ export class ListarPensamentoComponent implements OnInit {
     // }
   ];
 
-  constructor() {  }
+  constructor(private service: PensamentoService) {  } // agora tenho acesso a todos os metodos desse service
+
 
   ngOnInit(): void {
-
+    this.service.listar() //esse sera o primeiro metodo a ser iniciado pela aplicacao
   }
 }
