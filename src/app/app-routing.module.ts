@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
 import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 // Constante routes representando as rotas da aplicacao, do tipo Route que é um objeto de configuracao que define as rotas. Na nossa aplicacao havera um arrey de rotas
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'pensamentos/excluirPensamento/:id',
     component: ExcluirPensamentoComponent // rota de exclusao de pensamento por id, fiz apos criar a funcao excluir em excluir-pensamento.component.ts e apos fui em pensamento.component.html para inserir o routerLink="/pensamentos/excluirPensamento/{{pensamento.id}}"
+  },
+  {
+    path: 'pensamentos/editarPensamento/:id',
+    component: EditarPensamentoComponent
   }
 ];
 
