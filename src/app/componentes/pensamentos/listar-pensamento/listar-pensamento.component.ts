@@ -38,6 +38,8 @@ export class ListarPensamentoComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.service.listar() //esse sera o primeiro metodo a ser iniciado pela aplicacao
+    this.service.listar().subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos //this.listaPensamentos é a propriedade listaPensamentos que recebe o array de pensamento com sua interface
+    }) //aqui foi informado o subscribe para informar sempre que houver uma mudanca, é como uma notificacao de novo video em um canal que vc é inscrito no YT
   }
 }

@@ -90,7 +90,7 @@
     </div>
     <div class="acoes">
       <button (click)="criarPensamento()" class="botao">Salvar</button> <!-- EVENT BINDINHG - ao contrario do property binding que renderiza no HTML propriedades e atributos do component.ts, o EVENT BINDING enventListenner que me permite criar metodos e funcoes advindas de interacao com o frontend, no exemplo desse exercicio eu criei o event binding no botao salvar com (click) e ao clicar no botao Salvar, criara a funcao criarPensamento() que chamado da mesma funcao declarada em criar-pensamento.component.ts que retorna o comportamento de um alert com mensagem de Novo pensamento criado.-->
-      <button routerLink="/listarPensamento" (click)="cancelar()" class="botao">Cancelar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>
